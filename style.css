@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+
+  height: 100vh;
+  display: flex;
+  background-color: rgba(87, 189, 130);
+  transition: background 0.5s ease;
+  position: relative;
+}
+.profile-pic {
+  position: absolute;
+  top: 26%;
+  left: 44%;
+  font-size: 73px;
+  color: white;
+  border: 5px solid white;
+  border-radius: 50%;
+  padding: 16px;
+  background: #aba6a6f2;
+
+}
+
+.field-Username,
+.field-Email,
+.field-password,
+.field-end{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.field-Username i,
+.field-Email i,
+.field-password i,
+.field-end i {
+  padding: 15px;
+  cursor: pointer;
+}
+.field-Username input,
+.field-Email input,
+.field-password input{
+  background: none;
+  border: none;
+  height: 100%;
+  outline: none;
+  flex: 1
+}
+div.innactive{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+}
+div.active{
+  opacity: 1;
+  pointer-events: all;
+  transform: translate()-50%, -50%;
+}
+@keyframes shake {
+ 0%{
+   transform: translate(-50%, -50%) rotate(0deg);
+ }
+  50%{
+     transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100%{
+     transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
